@@ -213,8 +213,10 @@ namespace MapleDX
             try
             {
                 tcpClient.Connect("164.132.200.143", 14999); //cs port
-                statusLabel.ForeColor = System.Drawing.Color.Green;
+                statusLabel.ForeColor = System.Drawing.Color.Lime;
                 statusLabel.Text = "Online";
+                statusTimer.Stop();
+                MessageBox.Show("Server is now Online!", "Yay!");
             }
             catch (Exception)
             {
@@ -231,13 +233,13 @@ namespace MapleDX
                     tcpClient.Connect("164.132.200.143", 14999); //cs port
                     statusLabel.ForeColor = System.Drawing.Color.Lime;
                     statusLabel.Text = "Online";
-                }
+            }
                 catch (Exception)
                 {
                     statusLabel.ForeColor = System.Drawing.Color.Red;
                     statusLabel.Text = "Offline";
-                   // statusTimer.Enabled = true;
-                   // statusTimer.Start();
+                    statusTimer.Enabled = true;
+                    statusTimer.Start();
                 }
             
         }

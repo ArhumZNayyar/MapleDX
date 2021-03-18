@@ -410,9 +410,5 @@ Source.cpp
 Source1.cpp
 *.tsx
 *.ttf
-LICENSE
-Mob_Pink_Bean.ico
-.gitattributes
-.gitattributes
-.gitattributes
+*.ico
 LICENSE
