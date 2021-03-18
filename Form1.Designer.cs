@@ -53,6 +53,9 @@
             this.doneArcaneBox = new System.Windows.Forms.CheckBox();
             this.doneBossBox = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.statusNameLabel = new System.Windows.Forms.Label();
+            this.statusLabel = new System.Windows.Forms.Label();
+            this.statusTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -319,6 +322,35 @@
             this.label2.TabIndex = 22;
             this.label2.Text = "Written in C# by Arhum Nayyar";
             // 
+            // statusNameLabel
+            // 
+            this.statusNameLabel.AutoSize = true;
+            this.statusNameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.statusNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusNameLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.statusNameLabel.Location = new System.Drawing.Point(456, 34);
+            this.statusNameLabel.Name = "statusNameLabel";
+            this.statusNameLabel.Size = new System.Drawing.Size(48, 16);
+            this.statusNameLabel.TabIndex = 23;
+            this.statusNameLabel.Text = "Status:";
+            // 
+            // statusLabel
+            // 
+            this.statusLabel.AutoSize = true;
+            this.statusLabel.BackColor = System.Drawing.Color.Transparent;
+            this.statusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.statusLabel.Location = new System.Drawing.Point(501, 34);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(29, 16);
+            this.statusLabel.TabIndex = 24;
+            this.statusLabel.Text = "???";
+            // 
+            // statusTimer
+            // 
+            this.statusTimer.Interval = 6000;
+            this.statusTimer.Tick += new System.EventHandler(this.statusTimer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,6 +358,8 @@
             this.BackgroundImage = global::MapleDX.Properties.Resources.mpDX;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(555, 348);
+            this.Controls.Add(this.statusLabel);
+            this.Controls.Add(this.statusNameLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.currentTime);
             this.Controls.Add(this.alarmButton);
@@ -353,6 +387,7 @@
             this.Name = "Form1";
             this.Text = "MapleDX";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,6 +418,9 @@
         private System.Windows.Forms.Label currentTime;
         private System.Windows.Forms.Timer clockTimer;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label statusNameLabel;
+        private System.Windows.Forms.Label statusLabel;
+        private System.Windows.Forms.Timer statusTimer;
     }
 }
 

@@ -1,2 +1,2 @@
 # MapleDX
- A Daily Quest/Activity tool for MapleStory
+ A Daily Quest/Activity Tool for MapleStory

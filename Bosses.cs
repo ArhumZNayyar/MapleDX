@@ -61,6 +61,14 @@ namespace MapleDX
                 MapleDX.Properties.Settings.Default.lotusBX = false;
                 MapleDX.Properties.Settings.Default.lucidBX = false;
                 MapleDX.Properties.Settings.Default.willBX = false;
+                MapleDX.Properties.Settings.Default.omniBX = false;
+                MapleDX.Properties.Settings.Default.papaBX = false;
+                MapleDX.Properties.Settings.Default.vonBX = false;
+                MapleDX.Properties.Settings.Default.juulBX = false;
+                MapleDX.Properties.Settings.Default.bMageBX = false;
+                MapleDX.Properties.Settings.Default.princessBX = false;
+                MapleDX.Properties.Settings.Default.chillaBX = false;
+
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -81,6 +89,10 @@ namespace MapleDX
                 {
                     newBarValue += 5;
                 }
+                if (MapleDX.Properties.Settings.Default.chillaBX == true)
+                {
+                    newBarValue += 5;
+                }
                 MapleDX.Properties.Settings.Default.bossBarValue = newBarValue;
                 MapleDX.Properties.Settings.Default.ZakumBx = false;
                 MapleDX.Properties.Settings.Default.MagnusBX = false;
@@ -98,6 +110,12 @@ namespace MapleDX
                 MapleDX.Properties.Settings.Default.lotusBX = false;
                 MapleDX.Properties.Settings.Default.lucidBX = false;
                 MapleDX.Properties.Settings.Default.willBX = false;
+                MapleDX.Properties.Settings.Default.omniBX = false;
+                MapleDX.Properties.Settings.Default.papaBX = false;
+                MapleDX.Properties.Settings.Default.vonBX = false;
+                MapleDX.Properties.Settings.Default.juulBX = false;
+                MapleDX.Properties.Settings.Default.bMageBX = false;
+                MapleDX.Properties.Settings.Default.princessBX = false;
             }
         }
 
@@ -389,9 +407,118 @@ namespace MapleDX
             }
         }
 
+        private void omniBox_Click(object sender, EventArgs e)
+        {
+            if (omniBox.Checked)
+            {
+                MapleDX.Properties.Settings.Default.bossBarValue += 5;
+                completionNumber++;
+            }
+            else if (!omniBox.Checked && MapleDX.Properties.Settings.Default.bossBarValue != 0)
+            {
+                MapleDX.Properties.Settings.Default.bossBarValue -= 5;
+                completionNumber--;
+            }
+        }
+
         private void Bosses_Load(object sender, EventArgs e)
         {
             isClosed = false;
+        }
+
+        private void papBox_Click(object sender, EventArgs e)
+        {
+            if (papBox.Checked)
+            {
+                MapleDX.Properties.Settings.Default.bossBarValue += 5;
+                completionNumber++;
+            }
+            else if (!papBox.Checked && MapleDX.Properties.Settings.Default.bossBarValue != 0)
+            {
+                MapleDX.Properties.Settings.Default.bossBarValue -= 5;
+                completionNumber--;
+            }
+        }
+
+        private void vonBOX_Click(object sender, EventArgs e)
+        {
+            if (vonBOX.Checked)
+            {
+                MapleDX.Properties.Settings.Default.bossBarValue += 5;
+                completionNumber++;
+            }
+            else if (!vonBOX.Checked && MapleDX.Properties.Settings.Default.bossBarValue != 0)
+            {
+                MapleDX.Properties.Settings.Default.bossBarValue -= 5;
+                completionNumber--;
+            }
+        }
+
+        private void chillaBox_Click(object sender, EventArgs e)
+        {
+            if (chillaBox.Checked)
+            {
+                MapleDX.Properties.Settings.Default.bossBarValue += 5;
+                completionNumber++;
+            }
+            else if (!chillaBox.Checked && MapleDX.Properties.Settings.Default.bossBarValue != 0)
+            {
+                MapleDX.Properties.Settings.Default.bossBarValue -= 5;
+                completionNumber--;
+            }
+        }
+
+        private void bMageBOX_Click(object sender, EventArgs e)
+        {
+            if (bMageBOX.Checked)
+            {
+                MapleDX.Properties.Settings.Default.bossBarValue += 5;
+                completionNumber++;
+            }
+            else if (!bMageBOX.Checked && MapleDX.Properties.Settings.Default.bossBarValue != 0)
+            {
+                MapleDX.Properties.Settings.Default.bossBarValue -= 5;
+                completionNumber--;
+            }
+        }
+
+        private void princessBOX_Click(object sender, EventArgs e)
+        {
+            if (princessBOX.Checked)
+            {
+                MapleDX.Properties.Settings.Default.bossBarValue += 5;
+                completionNumber++;
+            }
+            else if (!princessBOX.Checked && MapleDX.Properties.Settings.Default.bossBarValue != 0)
+            {
+                MapleDX.Properties.Settings.Default.bossBarValue -= 5;
+                completionNumber--;
+            }
+        }
+
+        private void juulBOX_Click(object sender, EventArgs e)
+        {
+            if (juulBOX.Checked)
+            {
+                MapleDX.Properties.Settings.Default.bossBarValue += 5;
+                completionNumber++;
+            }
+            else if (!juulBOX.Checked && MapleDX.Properties.Settings.Default.bossBarValue != 0)
+            {
+                MapleDX.Properties.Settings.Default.bossBarValue -= 5;
+                completionNumber--;
+            }
+        }
+
+        private void selectAll_Click(object sender, EventArgs e)
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c is CheckBox)
+                {
+                    
+                }
+            }
         }
     }
 }
